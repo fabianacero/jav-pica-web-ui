@@ -1,14 +1,16 @@
 # Pontificia Universidad Javeriana. Bogotá.
-## jav-ps-web-ui
+## jav-pica-web-ui
 
-Landing page y aplicación de la solición de cotizaciones online, para al trabajo "socialización II" de la asignatura patrones 
-de diseño, en la Especialización de Arquitectura de Software Empresarial 2020 I.
+Landing page y aplicación de la solición de cotizaciones online, para al proyecto final Proyecto de Implementación Centrado en Arquitectura "PICA".
 
 ### Integrantes:
 
-* Andres Martinez Cobos
-* Fabian Acero
-* Robinson Torres
+* Pedro Alejandro Rojas
+* Jorge Avendaño
+* Fabián Acero García
+* William Quintero
+* Camilo Cortes
+
 
 # Instalación
 
@@ -16,12 +18,12 @@ Para la ejecución de los siguientes pasos, es necesario tener instalados nodejs
 
 ### Descargar el proyecto
 ```bash
-git clone git@github.com:fabianacero/jav-ps-web-ui.git
+git clone git@github.com:fabianacero/jav-pica-web-ui.git
 ```
 
 ### Obtener dependencias
 ```bash
-cd jav-ps-web-ui
+cd jav-pica-web-ui
 npm i
 ```
 ### Instalar librerías para gráficas
