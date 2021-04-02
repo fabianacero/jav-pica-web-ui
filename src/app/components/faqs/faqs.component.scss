@@ -1,0 +1,63 @@
+@import 'src/assets/scss/_variables.scss';
+
+div.faqs {
+  align-items: center;
+  background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  font-family: "Baloo 2";
+  justify-content: flex-start;
+
+  > h2 {
+    color: $title-h2-color;
+    font-size: 3rem;
+    margin-top: 5rem;
+    text-align: center;
+    text-decoration: underline $faqs-main-color;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__element {
+    border: solid 0.1rem #ccc;
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 5rem;
+    min-height: 20rem;
+    min-width: 30rem;
+    padding: 3rem 0.5rem 0.5rem;
+    text-align: center;
+
+    > h3 {
+      font-size: 1.8rem;
+      margin: 0.4rem 0.8rem 0;
+    }
+
+    > p {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin: 0.9rem 1.4rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  div.faqs {
+    &__container {
+      flex-flow: row wrap;
+      position: relative;
+      justify-content: space-evenly;
+      margin: 0 5rem;
+      width: 100%;
+    }
+
+    &__element {
+      flex: 0 1 calc(30% - 8px);
+      margin: 2rem;
+    }
+  }
+}

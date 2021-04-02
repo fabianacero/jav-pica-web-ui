@@ -1,0 +1,118 @@
+@import 'src/assets/scss/_variables.scss';
+
+.banner {
+  padding-top: 5rem;
+  font-family: "Baloo 2";
+
+  & > figure {
+    margin: 0;
+
+    & > div {
+      display: none;
+      margin: 0px auto;
+    }
+
+    &.visible > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+
+  &__element {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 22rem;
+    width: 100%;
+
+    & > figcaption {
+      font-size: 3.5rem;
+      font-weight: bold;
+      max-width: 57rem;
+      text-align: right;
+    }
+
+    &.first {
+      background-image: url("src/assets/images/banner_01.jpg");
+      color: #8a0b2b;
+      text-shadow: -1px 3px #a37732;
+
+
+      & > figcaption {
+        align-self: flex-start;
+        margin: 0 10rem 0 0;
+        display: block;
+        font-size: 2.5rem;
+        text-align: center;
+      }
+    }
+
+    &.second {
+      background-image: url("src/assets/images/banner_02.jpg");
+      color: #03377b;
+
+      & > figcaption {
+        align-self: flex-start;
+        color: #aedafc;
+        display: block;
+        font-size: 2rem;
+        margin: 0 0 0 1rem;
+        text-shadow: -1px 2px grey;
+      }
+    }
+
+    &.third {
+      background-image: url("src/assets/images/banner_03.jpeg");
+      color: #e6e6e9;
+
+      & > figcaption {
+        align-self: flex-start;
+        color: #aedafc;
+        display: block;
+        font-size: 2rem;
+        margin-left: 1rem;
+        max-width: 18rem;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .banner {
+    &__element {
+      min-height: 30rem;
+
+      &.first {
+        background-position: 0rem -9rem;
+
+        & > figcaption {
+          font-size: 3.5rem;
+          text-align: right;
+        }
+      }
+
+      &.second {
+        background-position: 0rem -51rem;
+
+        & > figcaption {
+          font-size: 3.5rem;
+          margin: 0 0 0 10rem;
+          text-align: left;
+        }
+      }
+
+      &.third {
+        background-position: 0rem -22rem;
+
+        & > figcaption {
+          font-size: 3.5rem;
+          margin: 0 0 0 10rem;
+          max-width: 33rem;
+        }
+      }
+    }
+  }
+}

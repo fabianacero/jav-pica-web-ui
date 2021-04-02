@@ -1,0 +1,66 @@
+<app-header></app-header>
+<ngb-alert [dismissible]="true" *ngIf="!staticAlertClosed" (close)="staticAlertClosed = true">
+  <strong>Atención!</strong> Solicitud de cotización envada exitosamente
+</ngb-alert>
+<div class="quote__container">
+  <div *ngIf="!showQuoteDetail" class="quote__list">
+
+    <div *ngIf="hasTemporalQuotes">
+      <div *ngFor="let quotation of temporalQuotations" class="quote__resume before-send">
+        <div class="quote__description">
+          <h3>Cotizacion pendiente</h3>
+          <p>Hemos detectado la siguiente cotización que ha quedado en estado pendiente de envío</p>
+          <span class="product" *ngIf="quotation.categoryId == categoryEnum.PRODUCT">producto</span>
+          <span class="service" *ngIf="quotation.categoryId == categoryEnum.SERVICE">servicio</span>
+        </div>
+        <div class="quote__status">
+          <h3>Por enviar</h3>
+          <p><a href="#" (click)="onQuoteClick(quotation.categoryId)">Ver detalle</a></p>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <div *ngIf="requestedQuotations">
+      <div *ngFor="let quotation of requestedQuotations" class="quote__resume {{quotation.eRequestStatus | lowercase}}">
+        <div class="quote__description">
+          <h3>Cotizacion {{quotation.eRequestStatus | quoteStatus}}</h3>
+          <p>{{quotation.additionalInfo}}</p>
+          <span class="product" *ngIf="quotation.categoryId == categoryEnum.PRODUCT">producto</span>
+          <span class="service" *ngIf="quotation.categoryId == categoryEnum.SERVICE">servicio</span>
+        </div>
+        <div class="quote__status">
+            <h3>{{quotation.eRequestStatus | quoteStatus}}</h3>
+          <p><a href="#" (click)="onQuoteClick(quotation)">Ver detalle</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div *ngIf="showQuoteDetail" class="quote__detail">
+    <div class="quote__elements">
+      <app-cart [quotes]="quotation.details" [skipStorage]="skipStorage"></app-cart>
+    </div>
+    <div class="quote__request">
+      <form #requestQuoteForm="ngForm" (ngSubmit)="onSubmit(requestQuoteForm)" class="forms">
+        <div class="forms__form--inline">
+          <h2>Solicitar Cotización</h2>
+          <p class="quote__paragraph">Nuestros proveedores tomarán su cotización y le enviarán a oferta al
+            correo {{session.person.email}} y al número telefónico {{session.person.phoneNumber}} por SMS.
+            Si ésta no es la información correcta, por favor actualice su perfil</p>
+        </div>
+        <div class="forms__form--inline">
+          <div class="forms__form--input">
+            <textarea name="additionalInfo" id="additionalInfo" type="text" [(ngModel)]="quotation.additionalInfo"
+                      required [disabled]="skipStorage"></textarea>
+          </div>
+        </div>
+        <div *ngIf="!skipStorage" class="forms__button">
+          <button name="send" class="button" [disabled]="!requestQuoteForm.valid">Agregar al Cotizador</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

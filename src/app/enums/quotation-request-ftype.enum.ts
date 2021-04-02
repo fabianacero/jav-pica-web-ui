@@ -1,0 +1,8 @@
+export enum QuotationRequestFtype {
+  CATEGORY = 'CATEGORY',
+  ID = 'ID',
+  PERSON = 'PERSON',
+  PROVIDER = 'PROVIDER',
+  PERSON_CATEGORY = 'PERSON_CATEGORY',
+  PERSON_STATUS = 'PERSON_STATUS'
+}

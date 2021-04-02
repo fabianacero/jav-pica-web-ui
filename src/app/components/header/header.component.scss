@@ -1,0 +1,209 @@
+@import 'src/assets/scss/_variables.scss';
+
+.header {
+  background-color: $gray-color;
+  border-bottom: 1px solid gray;
+  font-family: "Baloo 2";
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    margin: 0 2rem;
+  }
+
+  &__nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+
+    .shopping_cart {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &__content {
+        color: transparent;
+        align-items: center;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        height: 0rem;
+        justify-content: center;
+        min-width: 30rem;
+        position: absolute;
+        top: 6rem;
+        transition: height ease-in-out 0.8s;
+        visibility: hidden;
+
+        & * {
+          background-color: red;
+          visibility: hidden;
+          height: 0;
+        }
+
+        &.active {
+          border: solid 1px #808080;
+          height: 40rem;
+          color: #ccc;
+          visibility: visible;
+
+          & * {
+            visibility: visible;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    > a {
+      color: gray;
+      font-size: 1.7rem;
+      line-height: 6rem;
+      padding: 0 1rem;
+      text-decoration: none;
+
+      &.active {
+        background: #e6e6e9;
+        border-bottom: solid;
+
+        &.faqs {
+          border-bottom: solid $faqs-main-color;
+        }
+
+        &.products {
+          border-bottom: solid $product-main-color;
+        }
+
+        &.services {
+          border-bottom: solid $sevice-main-color;
+        }
+      }
+    }
+  }
+
+  &__login {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin-left: 1rem;
+
+    > a {
+      color: gray;
+      font-size: 1.7rem;
+      line-height: 5rem;
+      text-decoration: none;
+    }
+  }
+
+  &__logo {
+    background-image: url("src/assets/images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 5rem;
+    height: 6rem;
+    width: 6rem;
+  }
+
+  &__button {
+    cursor: pointer;
+
+    &:hover {
+      > span {
+        background: #9e9e9e;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-around;
+
+    &--logo {
+      display: none;
+    }
+  }
+
+  &__account {
+    &--menu {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      font-size: 1.5rem;
+      justify-content: center;
+
+      > span {
+        line-height: 5rem;
+        margin-left: 0.5rem;
+      }
+
+      &::after {
+        color: #1b1b1b;
+        content: "▼";
+        font-size: 1.2rem;
+        line-height: 5rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .header {
+
+    &__container {
+      display: none;
+    }
+
+    &__nav {
+      align-content: unset;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      > a {
+        margin: 0 3rem;
+        padding: 0 2.2rem;
+      }
+    }
+
+    &__login {
+      margin-left: 0.5rem;
+
+      > a {
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    &__navigation {
+      display: flex;
+      justify-content: space-around;
+
+      &--logo {
+        align-items: flex-end;
+        color: #aedafc;
+        display: flex;
+        flex-direction: row;
+        font-size: 1.8rem;
+        line-height: 5rem;
+        margin-left: 5rem;
+
+        > p {
+          margin: 0 0 0 5rem;
+        }
+
+        > span {
+          font-size: 1.2rem;
+          color: #3789cd;
+        }
+      }
+    }
+  }
+}
+

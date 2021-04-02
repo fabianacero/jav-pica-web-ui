@@ -1,0 +1,207 @@
+@import 'src/assets/scss/_variables.scss';
+@import 'src/assets/scss/_forms.scss';
+
+:host-context {
+  font-family: "Baloo 2";
+}
+
+.quote {
+  font-size: 1.2rem;
+
+  &__noitems {
+    color: gainsboro;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  &__addition {
+    font-size: 1.8rem;
+  }
+
+  &__container {
+    padding-top: 9rem; // Temporal fix
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-height: 10rem;
+  }
+
+  &__resume {
+    -moz-box-shadow: -4px 3px 17px -8px rgba(128, 128, 128, 0.95);
+    -webkit-box-shadow: -4px 3px 17px -8px rgba(128, 128, 128, 0.95);
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: -4px 3px 17px -8px rgba(128, 128, 128, 0.95);
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    width: 35rem;
+
+    &:hover {
+      -webkit-box-shadow: -4px 3px 67px -12px rgba(128, 128, 128, 0.65);
+      -moz-box-shadow: -4px 3px 67px -12px rgba(128, 128, 128, 0.65);
+      box-shadow: -4px 3px 67px -12px rgba(128, 128, 128, 0.65);
+    }
+
+    > * {
+      height: 100%;
+    }
+
+    &.before-send {
+      background: $before-quote-color;
+    }
+
+    &.registered {
+      background: $registered-color;
+    }
+
+    &.in_quotation {
+      background: $in_quotation-color;
+    }
+
+    &.in_process {
+      background: $in_process-color;
+    }
+  }
+
+  &__description {
+    background: $gray-color;
+    border-radius: 1rem 0 0 1rem;
+    font-size: 1.2rem;
+    width: -moz-available;
+    width: -webkit-fill-available;
+
+    > p {
+      margin: 1rem;
+      font-size: 1.2rem;
+    }
+
+    > h3 {
+      margin: 1rem;
+      font-size: 1.3rem;
+    }
+
+    > span {
+      background: $product-main-color;
+      border-radius: 0rem 0rem 0rem 1rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 0 1rem;
+      color: white;
+    }
+  }
+
+  &__status {
+    border-radius: 0 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    min-width: 10rem;
+    text-align: center;
+
+    > h3 {
+      font-size: 1.3rem;
+    }
+
+    & > p {
+      margin: 0;
+    }
+
+    & a {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__detail {
+    border-radius: 1rem;
+    border: solid 1px gray;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    min-height: 25rem
+  }
+
+  &__elements {
+    border-radius: 1rem;
+    border: solid 1px gray;
+    margin: 1rem 3rem;
+    padding: 0.5rem 2rem;
+
+    &::ng-deep {
+      .shopping_cart__quote {
+        padding: 0;
+      }
+    }
+  }
+
+  &__request {
+    min-width: 20rem;
+    display: flex;
+    justify-content: center;
+
+    & textarea {
+      width: 25rem;
+      height: 8rem;
+    }
+  }
+
+  &__paragraph {
+    max-width: 25rem;
+  }
+
+  &__table {
+    display: table;
+    margin: 0 auto;
+    border-radius: 1rem;
+  }
+
+  &__header {
+    display: table-header-group;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    > div {
+      background-color: #3e8cce;
+      color: white;
+
+      &:first-of-type {
+        border-radius: 1rem 0 0;
+      }
+
+      &:last-of-type {
+        border-radius: 0 1rem 0 0;
+      }
+    }
+  }
+
+  &__footer {
+    display: table-footer-group;
+  }
+
+  &__row {
+    display: table-row;
+  }
+
+  &__column {
+    background: #ddd;
+    display: table-cell;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+
+    .forms__form--input {
+      margin: 0;
+      width: 13rem;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    &__resume {
+      width: 50rem;
+    }
+  }
+}

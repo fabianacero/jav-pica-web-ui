@@ -1,0 +1,45 @@
+{
+  "/user/*": {
+    "target": "http://localhost:7071",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/product-service/*": {
+    "target": "http://localhost:7072",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/sub-category/*": {
+    "target": "http://localhost:7072",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/request-quotation/*": {
+    "target": "http://localhost:7073",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/quotation/*": {
+    "target": "http://localhost:7073",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/advisor/*": {
+    "target": "http://localhost:7074",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+  ,
+  "/advisor/*": {
+    "target": "http://localhost:7074",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

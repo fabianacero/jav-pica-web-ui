@@ -1,0 +1,32 @@
+<div class="header" (window:scroll)="onScrollMove($event)">
+  <div class="header__container">
+    <div class="header__logo"></div>
+    <p class="header__button"><a (click)="menuAction()"><span class="material-icons">menu</span></a></p>
+  </div>
+  <div class="header__navigation">
+    <div class="header__logo header__navigation--logo" [routerLink]="[routes.APP]"><p>otizaciones</p><span>.com</span></div>
+    <nav class="header__nav" id="menu_options">
+      <a href="#productos" class="products">Productos</a>
+      <a href="#servicios" class="services">Servicios</a>
+      <a href="#preguntas" class="faqs">Preguntas Frecuentes</a>
+      <a *ngIf="!session" href="#shopping_cart" class="shopping_cart">
+        <span class="material-icons md-36">shopping_cart</span>
+        <app-cart class="shopping_cart__content"></app-cart>
+      </a>
+      <div *ngIf="!session" class="header__login">
+        <a [routerLink]="[routes.REGISTRATION]">Crea Tu Cuenta</a>
+        <a [routerLink]="[routes.LOGIN]">Ingresa</a>
+      </div>
+      <div *ngIf="session" class="header__account">
+        <a class="header__account--menu">
+          <span class="material-icons">account_box</span>
+          <span>{{session.firstName}}</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <app-account-menu *ngIf="session" class="header__account--options {{this.session.profile | lowercase}}"
+                    [session]="session"></app-account-menu>
+
+</div>
