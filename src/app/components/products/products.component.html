@@ -1,7 +1,9 @@
 <div class="products" id="productos">
-  <h2>Nuestros Productos</h2>
   <div class="products__container">
-    <div class="products__subcategory" *ngFor="let product of products">
+    <!-- Buscador -->
+    <div class="products__search"><span>Buscar:</span><input (change)="searchProduct($event)" /></div>
+    <!-- End Buscador -->
+    <div class="products__subcategory" *ngFor="let product of filteredProducts">
       <h3>{{product[0]['subCategoryDescription']}}</h3>
       <div class="products__group">
         <div class="products__category" appProductService *ngFor="let group of product">

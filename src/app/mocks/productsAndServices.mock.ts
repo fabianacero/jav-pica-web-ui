@@ -1,5 +1,3 @@
-import { ProductServiceResponse } from "../models/product-service-response";
-
 export const productsAndServices = [
   {
     "categoryId":1,
@@ -7,154 +5,94 @@ export const productsAndServices = [
     "productsServices":[
       {
         "subCategoryId":1,
-        "productServiceDescription":"CELULARES",
-        "subCategoryDescription":"TECNOLOGIA",
+        "productServiceDescription":"Samsung",
+        "subCategoryDescription":"Televisores",
         "productServiceId":1
       },
       {
         "subCategoryId":1,
-        "productServiceDescription":"COMPUTADORES",
-        "subCategoryDescription":"TECNOLOGIA",
+        "productServiceDescription":"Sony",
+        "subCategoryDescription":"Televisores",
+        "productServiceId":2
+      },
+      {
+        "subCategoryId":1,
+        "productServiceDescription":"LG",
+        "subCategoryDescription":"Televisores",
         "productServiceId":2
       },
       {
         "subCategoryId":2,
-        "productServiceDescription":"TELEVISORES",
-        "subCategoryDescription":"ELECTRODOMESTICOS",
+        "productServiceDescription":"Apple",
+        "subCategoryDescription":"Computadoras",
         "productServiceId":3
       },
       {
         "subCategoryId":2,
-        "productServiceDescription":"NEVERAS",
-        "subCategoryDescription":"ELECTRODOMESTICOS",
+        "productServiceDescription":"Toshiba",
+        "subCategoryDescription":"Computadoras",
         "productServiceId":4
       },
       {
         "subCategoryId":2,
-        "productServiceDescription":"ESTUFAS",
-        "subCategoryDescription":"ELECTRODOMESTICOS",
+        "productServiceDescription":"Acer",
+        "subCategoryDescription":"Computadoras",
         "productServiceId":5
       },
       {
         "subCategoryId":3,
-        "productServiceDescription":"ZAPATOS",
-        "subCategoryDescription":"ROPA",
+        "productServiceDescription":"Motorola",
+        "subCategoryDescription":"Celulares",
         "productServiceId":6
       },
       {
         "subCategoryId":3,
-        "productServiceDescription":"ROPA INFANTIL",
-        "subCategoryDescription":"ROPA",
+        "productServiceDescription":"iPhone",
+        "subCategoryDescription":"Celulares",
         "productServiceId":7
       },
       {
         "subCategoryId":3,
-        "productServiceDescription":"BOLZOS",
-        "subCategoryDescription":"ROPA",
+        "productServiceDescription":"Alcatel",
+        "subCategoryDescription":"Celulares",
         "productServiceId":8
       },
       {
         "subCategoryId":3,
-        "productServiceDescription":"MEDIAS",
-        "subCategoryDescription":"ROPA",
+        "productServiceDescription":"Nokia",
+        "subCategoryDescription":"Celulares",
         "productServiceId":9
       },
       {
         "subCategoryId":4,
-        "productServiceDescription":"MESAS",
-        "subCategoryDescription":"MUEBLES",
+        "productServiceDescription":"XBOX",
+        "subCategoryDescription":"Consolas",
         "productServiceId":10
       },
       {
         "subCategoryId":4,
-        "productServiceDescription":"CAMAS",
-        "subCategoryDescription":"MUEBLES",
+        "productServiceDescription":"Play Station",
+        "subCategoryDescription":"Consolas",
         "productServiceId":11
       },
       {
         "subCategoryId":4,
-        "productServiceDescription":"SOFAS",
-        "subCategoryDescription":"MUEBLES",
+        "productServiceDescription":"WII",
+        "subCategoryDescription":"Consolas",
         "productServiceId":12
       },
       {
         "subCategoryId":4,
-        "productServiceDescription":"ESCRITORIOS",
-        "subCategoryDescription":"MUEBLES",
+        "productServiceDescription":"Nintendo DS",
+        "subCategoryDescription":"Consolas",
         "productServiceId":13
       },
       {
         "subCategoryId":4,
-        "productServiceDescription":"BIBLIOTECA",
-        "subCategoryDescription":"MUEBLES",
+        "productServiceDescription":"PSP  ",
+        "subCategoryDescription":"Consolas",
         "productServiceId":14
-      },
-      {
-        "subCategoryId":10,
-        "productServiceDescription":"AKT",
-        "subCategoryDescription":"MOTOS",
-        "productServiceId":22
-      },
-      {
-        "subCategoryId":13,
-        "productServiceDescription":"Corona",
-        "subCategoryDescription":"Ceramica",
-        "productServiceId":23
-      },
-      {
-        "subCategoryId":14,
-        "productServiceDescription":"Matel",
-        "subCategoryDescription":"Juguetes",
-        "productServiceId":24
-      }
-    ]
-  },
-  {
-    "categoryId":2,
-    "categoryDescription":"SERVICE",
-    "productsServices":[
-      {
-        "subCategoryId":5,
-        "productServiceDescription":"COMPUTADORES",
-        "subCategoryDescription":"MANTENIMIENTO",
-        "productServiceId":15
-      },
-      {
-        "subCategoryId":5,
-        "productServiceDescription":"ELECTRODOMESTICOS",
-        "subCategoryDescription":"MANTENIMIENTO",
-        "productServiceId":16
-      },
-      {
-        "subCategoryId":6,
-        "productServiceDescription":"ELECTRICA",
-        "subCategoryDescription":"INSTALACION",
-        "productServiceId":17
-      },
-      {
-        "subCategoryId":6,
-        "productServiceDescription":"GAS",
-        "subCategoryDescription":"INSTALACION",
-        "productServiceId":18
-      },
-      {
-        "subCategoryId":7,
-        "productServiceDescription":"DIRECT TV",
-        "subCategoryDescription":"CABLE",
-        "productServiceId":19
-      },
-      {
-        "subCategoryId":7,
-        "productServiceDescription":"CLARO",
-        "subCategoryDescription":"CABLE",
-        "productServiceId":20
-      },
-      {
-        "subCategoryId":7,
-        "productServiceDescription":"HVTV",
-        "subCategoryDescription":"CABLE",
-        "productServiceId":21
       }
     ]
   }
-] as ProductServiceResponse[];
+] as any;

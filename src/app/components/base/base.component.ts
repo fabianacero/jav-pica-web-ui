@@ -15,7 +15,6 @@ export class BaseComponent implements OnInit {
   public service: ProductServiceDetail;
   public categories = {product: 0, service: 0};
   public productsBySubCategory;
-  public servicesBySubCategory;
 
   constructor(private productsService: ProductsService, private utilities: Utilities) {
   }
@@ -33,8 +32,6 @@ export class BaseComponent implements OnInit {
       });
       this.productsBySubCategory = this.utilities.groupBy(this.product, 'subCategoryDescription');
       this.productsBySubCategory = Object.values(this.productsBySubCategory);
-      this.servicesBySubCategory = this.utilities.groupBy(this.service, 'subCategoryDescription');
-      this.servicesBySubCategory = Object.values(this.servicesBySubCategory);
     });
   }
 

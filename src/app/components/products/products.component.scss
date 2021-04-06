@@ -17,6 +17,24 @@ div.products {
     text-decoration: underline $product-main-color;
   }
 
+  &__search {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+
+    > span {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+
+    > input {
+      font-size: 2rem;
+      height: 4rem;
+      width: 30rem;
+    }
+  }
+
   &__container {
     width: 100%;
   }
@@ -38,6 +56,7 @@ div.products {
   &__group {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     & * {
       flex: 1 1 calc(86% - 1.8rem);
@@ -138,77 +157,46 @@ div.products {
       transform: rotateY(180deg);
     }
 
-    &.celulares {
-      background-image: url('src/assets/images/products/phone.png');
+    &.iphone {
+      background-image: url('src/assets/images/products/iphone.png');
       background-position: 15rem -1rem;
       background-size: 30rem;
     }
 
-    &.computadores {
-      background-image: url('src/assets/images/products/computer.jpg');
-      background-position: 0.5rem -8rem;
-    }
-
-    &.televisores {
-      background-image: url('src/assets/images/products/television.jpg');
-      background-position: -2rem -18rem;
-    }
-
-    &.zapatos {
-      background-image: url('src/assets/images/products/zapatos.png');
-      background-position: 0rem -8rem;
-    }
-
-    &.mesas {
-      background-image: url('src/assets/images/products/mesa.jpg');
-      background-position: -3rem -35rem;
-    }
-
-    &.biblioteca {
-      background-image: url('src/assets/images/products/library.jpg');
-      background-position: 0rem -5rem;
-    }
-
-    &.neveras {
-      background-image: url('src/assets/images/products/fridge.png');
-      background-position: center;
+    &.samsung {
+      background-image: url('src/assets/images/products/samsung.jpeg');
+      background-position: 8rem;
       background-size: 30rem;
     }
 
-    &.estufas {
-      background-image: url('src/assets/images/products/stove.jpg');
-      background-position: center;
+    &.sony {
+      background-image: url('src/assets/images/products/sony.jpeg');
+      background-position: 8rem;
+      background-size: 30rem;
     }
 
-    &.ropa.infantil {
-      background-image: url('src/assets/images/products/child-cloths.jpg');
-      background-position: 0.5rem 0rem;
+    &.lg {
+      background-image: url('src/assets/images/products/lg.jpeg');
+      background-position: 8rem;
+      background-size: 30rem;
     }
 
-    &.bolzos {
-      background-image: url('src/assets/images/products/handbag.jpg');
-      background-position: 0rem;
+    &.apple {
+      background-image: url('src/assets/images/products/apple.jpeg');
+      background-position: 12rem;
+      background-size: 19rem;
     }
 
-    &.medias {
-      background-image: url('src/assets/images/products/socks.jpg');
-      background-position: 0rem;
+    &.toshiba {
+      background-image: url('src/assets/images/products/toshiba.webp');
+      background-position: 12rem;
+      background-size: 19rem;
     }
 
-    &.camas {
-      background-image: url('src/assets/images/products/bed.jpg');
-      background-position: 0rem;
-    }
-
-    &.sofas {
-      background-image: url('src/assets/images/products/couch.jpg');
-      background-position: 1rem -1rem;
-      background-size: cover;
-    }
-
-    &.escritorios {
-      background-image: url('src/assets/images/products/desk.jpg');
-      background-position: 1rem -3rem;
+    &.acer {
+      background-image: url('src/assets/images/products/acer.jpeg');
+      background-position: 11rem -4rem;
+      background-size: 23rem;
     }
   }
 }
