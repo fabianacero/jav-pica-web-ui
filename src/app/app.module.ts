@@ -10,7 +10,6 @@ import {HomeComponent} from './pages/home/home.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {BannerComponent} from './components/banner/banner.component';
 import {ProductsComponent} from './components/products/products.component';
-import {ServicesComponent} from './components/services/services.component';
 import {FaqsComponent} from './components/faqs/faqs.component';
 import {RegistrationComponent} from './pages/registration/registration.component';
 import {LoginComponent} from './pages/login/login.component';
@@ -46,7 +45,6 @@ import { QuoteStatusPipe } from './pipes/quote-status.pipe';
     PageNotFoundComponent,
     BannerComponent,
     ProductsComponent,
-    ServicesComponent,
     FaqsComponent,
     RegistrationComponent,
     LoginComponent,
