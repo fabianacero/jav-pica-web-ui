@@ -1,7 +1,7 @@
 <div class="products" id="productos">
   <div class="products__container">
     <!-- Buscador -->
-    <div class="products__search"><span>Buscar:</span><input (change)="searchProduct($event)" /></div>
+    <div class="products__search"><span>Busca tu compra:</span><input (change)="searchProduct($event)" /></div>
     <!-- End Buscador -->
     <div class="products__subcategory" *ngFor="let product of filteredProducts">
       <h3>{{product[0]['subCategoryDescription']}}</h3>

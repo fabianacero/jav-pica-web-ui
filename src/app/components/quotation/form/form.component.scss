@@ -8,13 +8,13 @@
 
   > h2 {
     color: $title-h2-color;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     margin: 0.2rem;
   }
 
   > p {
     font-size: 1.2rem;
-    margin: 0.3rem;
+    margin: 1.2rem 0.8rem;
   }
 
   > form {
@@ -24,9 +24,12 @@
 
 .forms {
   &__form {
+    &--inline {
+      justify-content: center;
+    }
+
     &--input {
       margin: 0;
-      flex: 0 0 calc(40% - 0.8rem);
     }
   }
 

@@ -24,9 +24,8 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 
   searchProduct(event: Event): void {
 
-    const termToBeFound = event.target.value;
+    const termToBeFound = (event.target as HTMLInputElement).value;
     const expression = new RegExp(termToBeFound, 'gi');
-    console.log("termToBeFound, ", termToBeFound);
     const filtered = [];
     this.products.forEach((object) => {
       const category = object.filter((element) => {
@@ -34,13 +33,10 @@ export class ProductsComponent implements OnInit, AfterViewInit {
         const matchProductCategory = element.subCategoryDescription.match(expression);
         return matchProductName || matchProductCategory;
       });
-      console.log("category, ", category.length)
       if (category.length > 0) {
         filtered.push(category);
       }
     });
-    console.log('filtered', filtered);
-    console.log("products, ", this.products);
     this.filteredProducts = filtered;
   }
 

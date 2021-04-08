@@ -198,5 +198,53 @@ div.products {
       background-position: 11rem -4rem;
       background-size: 23rem;
     }
+
+    &.motorola {
+      background-image: url('src/assets/images/products/motorola.png');
+      background-position: 11rem 0rem;
+      background-size: 23rem;
+    }
+
+    &.alcatel {
+      background-image: url('src/assets/images/products/alcatel.png');
+      background-position: 12rem 0rem;
+      background-size: 20rem;
+    }
+
+    &.nokia {
+      background-image: url('src/assets/images/products/nokia.png');
+      background-position: 12rem 0rem;
+      background-size: 20rem;
+    }
+
+    &.xbox {
+      background-image: url('src/assets/images/products/xbox.png');
+      background-position: 14rem 1rem;
+      background-size: 19rem;
+    }
+
+    &.play {
+      background-image: url('src/assets/images/products/playstation.jpeg');
+      background-position: 14rem 1rem;
+      background-size: 19rem;
+    }
+
+    &.wii {
+      background-image: url('src/assets/images/products/wii.png');
+      background-position: 14rem 1rem;
+      background-size: 19rem;
+    }
+
+    &.nintendo {
+      background-image: url('src/assets/images/products/nintendo-ds.png');
+      background-position: 12rem 1rem;
+      background-size: 19rem;
+    }
+
+    &.psp {
+      background-image: url('src/assets/images/products/psp.png');
+      background-position: 10rem -3rem;
+      background-size: 25rem;
+    }
   }
 }
