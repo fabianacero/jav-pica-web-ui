@@ -32,6 +32,7 @@ export class BaseComponent implements OnInit {
       });
       this.productsBySubCategory = this.utilities.groupBy(this.product, 'subCategoryDescription');
       this.productsBySubCategory = Object.values(this.productsBySubCategory);
+      this.utilities.sortBy(this.productsBySubCategory, 'totalScore');
     });
   }
 

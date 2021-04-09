@@ -98,4 +98,12 @@ export class Utilities {
       return rv;
     }, {});
   }
+
+  public sortBy(source, field) {
+    source.forEach((o) => {
+      o.sort( function(a, b) {
+        return b[field] - a[field];
+      });
+    });
+  }
 }
