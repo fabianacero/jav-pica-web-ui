@@ -16,7 +16,7 @@ export class FormComponent implements OnInit {
   @Input() category;
   private categoryIndex: number;
   public productServiceDescription: string;
-  public productServiceId: number;
+  public totalScore: number;
   public temporalQuotations = [];
   public quotation: QuotationRequest;
   public quotationDetail: QuotationRequestDetail;
@@ -37,9 +37,9 @@ export class FormComponent implements OnInit {
     if (productServiceDataDecoded) {
       const productServiceData = JSON.parse(productServiceDataDecoded) as ProductServiceDetail;
       this.productServiceDescription = productServiceData.productServiceDescription;
-      this.productServiceId = productServiceData.productServiceId;
+      this.totalScore = productServiceData.totalScore;
       this.quotationDetail.productDescription = this.productServiceDescription;
-      this.quotationDetail.productId = productServiceData.productServiceId;
+      this.quotationDetail.productId = productServiceData.totalScore;
       if (this.temporalQuotations[this.categoryIndex]) {
         this.quotation = Object.assign(new QuotationRequest(), this.temporalQuotations[this.categoryIndex]);
         this.quotation.assingObjectToDetail(this.quotation.details);
