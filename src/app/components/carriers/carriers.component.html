@@ -1,1 +1,17 @@
-<p>carriers works!</p>
+<div class="carriers" id="carriers">
+  <div class="carriers__container">
+    <div class="carriers__group">
+      <div class="carriers__content" appCarrier *ngFor="let carrier of carriers">
+        <div class="carriers__inner">
+          <div class="carriers__image {{carrier['carrierDescription'] | lowercase}}"></div>
+          <div class="carriers__form">
+            <div class="carriers__form--header"><span class="back">x</span></div>
+            Some
+            <div class="carriers__form--button"><button>Seleccionar ></button></div>
+          </div>
+        </div>
+        <span>trasnportador</span>
+      </div>
+    </div>
+  </div>
+</div>

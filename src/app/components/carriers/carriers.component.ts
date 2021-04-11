@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carriers',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carriers.component.scss']
 })
 export class CarriersComponent implements OnInit {
+
+  @Input() carriers: any;
 
   constructor() { }
 

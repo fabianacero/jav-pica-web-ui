@@ -45,7 +45,6 @@ export class BaseComponent implements OnInit {
     this.carriersService.getAllCarriers().subscribe((carriers: [CarriersResponse]) => {
       this.carriers = carriers;
       this.utilities.sortBy(carriers, 'totalScore');
-      console.log("this.carriers, ", this.carriers);
     });
   }
 

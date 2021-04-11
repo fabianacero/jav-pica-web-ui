@@ -36,6 +36,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { QuoteStatusPipe } from './pipes/quote-status.pipe';
 import { CarrierComponent } from './pages/carrier/carrier.component';
 import { CarriersComponent } from './components/carriers/carriers.component';
+import { CarrierDirective } from './directives/carrier.directive';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { CarriersComponent } from './components/carriers/carriers.component';
     ProviderQuotesComponent,
     QuoteStatusPipe,
     CarrierComponent,
-    CarriersComponent
+    CarriersComponent,
+    CarrierDirective
   ],
   imports: [
     BrowserModule,
