@@ -99,11 +99,17 @@ export class Utilities {
     }, {});
   }
 
-  public sortBy(source, field) {
+  public multiSortBy(source, field) {
     source.forEach((o) => {
       o.sort( function(a, b) {
         return b[field] - a[field];
       });
+    });
+  }
+
+  public sortBy(source, field) {
+    source.sort( function(a, b) {
+      return b[field] - a[field];
     });
   }
 }

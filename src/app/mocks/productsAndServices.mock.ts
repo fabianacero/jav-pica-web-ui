@@ -13,7 +13,7 @@ export const productsAndServices = [
         "subCategoryId":1,
         "productServiceDescription":"Sony",
         "subCategoryDescription":"Televisores",
-        "totalScore":5
+        "totalScore":10
       },
       {
         "subCategoryId":1,
@@ -25,7 +25,7 @@ export const productsAndServices = [
         "subCategoryId":2,
         "productServiceDescription":"Apple",
         "subCategoryDescription":"Computadoras",
-        "totalScore":8
+        "totalScore":80
       },
       {
         "subCategoryId":2,

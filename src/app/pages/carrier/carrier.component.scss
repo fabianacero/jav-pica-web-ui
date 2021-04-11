@@ -1,0 +1,9 @@
+.carriers {
+  &__parent {
+    margin: 3rem;
+
+    > h1 {
+      margin: 3rem 0rem 4rem 0rem;
+    }
+  }
+}

@@ -12,10 +12,12 @@ import {SubcategoryComponent} from './pages/subcategory/subcategory.component';
 import {ProductComponent} from './pages/product/product.component';
 import {ProvideradmComponent} from './pages/provideradm/provideradm.component';
 import {ProviderQuotesComponent} from './pages/provider-quotes/provider-quotes.component';
+import { CarrierComponent } from "./pages/carrier/carrier.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/inicio', pathMatch: 'full'},
   {path: 'inicio', component: HomeComponent},
+  {path: 'transporte', component: CarrierComponent},
   {path: 'crea-tu-cuenta', component: RegistrationComponent},
   {path: 'ingresa', component: LoginComponent},
   {path: 'mi-cuenta', component: AccountComponent, canActivate: [LoginGuard]},
