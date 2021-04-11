@@ -9,6 +9,7 @@ import { productsAndServices } from "../../mocks/productsAndServices.mock";
   providedIn: 'root'
 })
 export class ProductsService {
+
   public enableMock = true;
 
   constructor(private httpRequest: HttpRequestService) {

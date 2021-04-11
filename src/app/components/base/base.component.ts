@@ -1,8 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {ProductServiceResponse} from '../../models/product-service-response';
-import {ProductServiceDetail} from '../../models/product-service-detail';
-import {ProductsService} from '../../provider/products/products.service';
-import {Utilities} from '../../utilities/utilities';
+import { Component, OnInit } from '@angular/core';
+import { ProductServiceResponse } from '../../models/product-service-response';
+import { ProductServiceDetail } from '../../models/product-service-detail';
+import { ProductsService } from '../../provider/products/products.service';
+import { Utilities } from '../../utilities/utilities';
+import { CarriersService } from "../../provider/carriers/carriers.service";
+import { CarriersResponse } from "../../models/carriers-response";
 
 @Component({
   selector: 'app-base',
@@ -15,8 +17,11 @@ export class BaseComponent implements OnInit {
   public service: ProductServiceDetail;
   public categories = {product: 0, service: 0};
   public productsBySubCategory;
+  public carriers;
 
-  constructor(private productsService: ProductsService, private utilities: Utilities) {
+  constructor(private productsService: ProductsService,
+              private carriersService: CarriersService,
+              private utilities: Utilities) {
   }
 
   ngOnInit(): void {
@@ -32,7 +37,15 @@ export class BaseComponent implements OnInit {
       });
       this.productsBySubCategory = this.utilities.groupBy(this.product, 'subCategoryDescription');
       this.productsBySubCategory = Object.values(this.productsBySubCategory);
-      this.utilities.sortBy(this.productsBySubCategory, 'totalScore');
+      this.utilities.multiSortBy(this.productsBySubCategory, 'totalScore');
+    });
+  }
+
+  public getAllCarriers() {
+    this.carriersService.getAllCarriers().subscribe((carriers: [CarriersResponse]) => {
+      this.carriers = carriers;
+      this.utilities.sortBy(carriers, 'totalScore');
+      console.log("this.carriers, ", this.carriers);
     });
   }
 

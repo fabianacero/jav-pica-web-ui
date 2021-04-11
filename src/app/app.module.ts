@@ -34,6 +34,8 @@ import {AccountMenuComponent} from './components/header/account-menu/account-men
 import { ProviderQuotesComponent } from './pages/provider-quotes/provider-quotes.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { QuoteStatusPipe } from './pipes/quote-status.pipe';
+import { CarrierComponent } from './pages/carrier/carrier.component';
+import { CarriersComponent } from './components/carriers/carriers.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { QuoteStatusPipe } from './pipes/quote-status.pipe';
     ProvideradmComponent,
     AccountMenuComponent,
     ProviderQuotesComponent,
-    QuoteStatusPipe
+    QuoteStatusPipe,
+    CarrierComponent,
+    CarriersComponent
   ],
   imports: [
     BrowserModule,
