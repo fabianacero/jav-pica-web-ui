@@ -1,0 +1,153 @@
+<link
+  href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+      <h3>Bienvenido</h3>
+      <p>
+        si ya cuenta con un usuario puede hacer clic en login, si necesita
+        registrarse llene el siguiente formulario de acuerdo a su rol
+      </p>
+      <input
+        type="submit"
+        name=""
+        value="Login"
+        [routerLink]="[routes.HOME]"
+      /><br />
+    </div>
+    <div class="col-md-9 register-right">
+      <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="home-tab"
+            data-toggle="tab"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+            (click)="asigRol('1')"
+            >Cliente</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="profile-tab"
+            data-toggle="tab"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+            (click)="asigRol('2')"
+            >Proveedor</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <h3 class="register-heading">Registro {{ Respuesta }}</h3>
+          <form
+            [formGroup]="RegisterForms"
+            (ngSubmit)="registerUser()"
+            novalidate
+          >
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <select formControlName="idType" class="form-control">
+                    <option value="" class="hidden" selected disabled>
+                      Tipo de Identificación
+                    </option>
+                    <option value="1">NIT</option>
+                    <option value="2">Cedula de ciudadania</option>
+                    <option value="3">Otro</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    formControlName="names"
+                    class="form-control"
+                    placeholder="Nombres*"
+                    value=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    formControlName="email"
+                    class="form-control"
+                    placeholder="Email *"
+                    value=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    formControlName="password"
+                    class="form-control"
+                    placeholder="Contraseña *"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    formControlName="id"
+                    class="form-control"
+                    placeholder="Cedula *"
+                    value=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    formControlName="surnames"
+                    class="form-control"
+                    placeholder="Apellidos *"
+                    value=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    formControlName="telephone"
+                    minlength="7"
+                    maxlength="10"
+                    name="txtEmpPhone"
+                    class="form-control"
+                    placeholder="Telefono *"
+                    value=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    formControlName="confirmPassword"
+                    class="form-control"
+                    placeholder="Confirme Contraseña *"
+                    value=""
+                  />
+                </div>
+                <input type="submit" class="btnRegister" value="Registro" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
