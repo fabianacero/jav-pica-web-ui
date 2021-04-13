@@ -11,7 +11,8 @@ import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.compo
 import {BannerComponent} from './components/banner/banner.component';
 import {ProductsComponent} from './components/products/products.component';
 import {FaqsComponent} from './components/faqs/faqs.component';
-import {RegistrationComponent} from './pages/registration/registration.component';
+import {RegistrationComponent} from '@pages/registration/registration.component';
+import {RegisterComponent} from '@pages/register/register.component';
 import {LoginComponent} from './pages/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpRequestService} from './provider/http-request/http-request.service';
@@ -50,6 +51,7 @@ import { CarrierDirective } from './directives/carrier.directive';
     ProductsComponent,
     FaqsComponent,
     RegistrationComponent,
+    RegisterComponent,
     LoginComponent,
     MustMatchDirective,
     AccountComponent,

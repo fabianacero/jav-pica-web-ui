@@ -2,6 +2,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+      "paths": {
+      "@environments/*": ["src/environments/*"],
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@models/*": ["src/app/models/*"],
+      "@provider/*": ["src/app/provider/*"]
+    }, 
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -21,3 +28,4 @@
     "strictInjectionParameters": true
   }
 }
+
