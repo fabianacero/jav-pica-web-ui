@@ -38,6 +38,7 @@ import { QuoteStatusPipe } from './pipes/quote-status.pipe';
 import { CarrierComponent } from './pages/carrier/carrier.component';
 import { CarriersComponent } from './components/carriers/carriers.component';
 import { CarrierDirective } from './directives/carrier.directive';
+import { ConfirmComponent } from './pages/confirm/confirm.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { CarrierDirective } from './directives/carrier.directive';
     QuoteStatusPipe,
     CarrierComponent,
     CarriersComponent,
-    CarrierDirective
+    CarrierDirective,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,

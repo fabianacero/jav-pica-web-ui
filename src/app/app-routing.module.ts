@@ -1,19 +1,20 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './pages/home/home.component';
-import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
-import {RegistrationComponent} from './pages/registration/registration.component';
-import {RegisterComponent} from '@pages/register/register.component';
-import {LoginComponent} from './pages/login/login.component';
-import {AccountComponent} from './pages/account/account.component';
-import {LoginGuard} from './guards/login.guard';
-import {QuotesComponent} from './pages/quotes/quotes.component';
-import {EstadisticaComponent} from './pages/estadistica/estadistica.component';
-import {SubcategoryComponent} from './pages/subcategory/subcategory.component';
-import {ProductComponent} from './pages/product/product.component';
-import {ProvideradmComponent} from './pages/provideradm/provideradm.component';
-import {ProviderQuotesComponent} from './pages/provider-quotes/provider-quotes.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { RegisterComponent } from '@pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AccountComponent } from './pages/account/account.component';
+import { LoginGuard } from './guards/login.guard';
+import { QuotesComponent } from './pages/quotes/quotes.component';
+import { EstadisticaComponent } from './pages/estadistica/estadistica.component';
+import { SubcategoryComponent } from './pages/subcategory/subcategory.component';
+import { ProductComponent } from './pages/product/product.component';
+import { ProvideradmComponent } from './pages/provideradm/provideradm.component';
+import { ProviderQuotesComponent } from './pages/provider-quotes/provider-quotes.component';
 import { CarrierComponent } from "./pages/carrier/carrier.component";
+import { ConfirmComponent } from "@pages/confirm/confirm.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/inicio', pathMatch: 'full'},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'crea-tu-cuenta', component: RegistrationComponent},
   {path: 'registro', component: RegisterComponent},
   {path: 'ingresa', component: LoginComponent},
+  {path: 'confirma-pedido', component: ConfirmComponent},
   {path: 'mi-cuenta', component: AccountComponent, canActivate: [LoginGuard]},
   {path: 'mis-cotizaciones', component: QuotesComponent, canActivate: [LoginGuard]},
   {path: 'cotizaciones-solicitadas', component: ProviderQuotesComponent, canActivate: [LoginGuard]},
