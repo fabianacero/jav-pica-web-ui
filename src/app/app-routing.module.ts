@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { RegisterComponent } from '@pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { LoginUsersComponent } from '@pages/login-users/login-users.component';
 import { AccountComponent } from './pages/account/account.component';
 import { LoginGuard } from './guards/login.guard';
 import { QuotesComponent } from './pages/quotes/quotes.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'crea-tu-cuenta', component: RegistrationComponent},
   {path: 'registro', component: RegisterComponent},
   {path: 'ingresa', component: LoginComponent},
+  {path: 'ingreso', component: LoginUsersComponent },
   {path: 'confirma-pedido', component: ConfirmComponent},
   {path: 'mi-cuenta', component: AccountComponent, canActivate: [LoginGuard]},
   {path: 'mis-cotizaciones', component: QuotesComponent, canActivate: [LoginGuard]},
