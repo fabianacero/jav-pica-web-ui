@@ -14,6 +14,7 @@ import {FaqsComponent} from './components/faqs/faqs.component';
 import {RegistrationComponent} from '@pages/registration/registration.component';
 import {RegisterComponent} from '@pages/register/register.component';
 import {LoginComponent} from './pages/login/login.component';
+import {LoginUsersComponent} from '@pages/login-users/login-users.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpRequestService} from './provider/http-request/http-request.service';
 import {HttpClientModule} from '@angular/common/http';
@@ -39,6 +40,10 @@ import { CarrierComponent } from './pages/carrier/carrier.component';
 import { CarriersComponent } from './components/carriers/carriers.component';
 import { CarrierDirective } from './directives/carrier.directive';
 import { ConfirmComponent } from './pages/confirm/confirm.component';
+import { StoreModule } from "@ngrx/store";
+import { EffectsModule } from "@ngrx/effects";
+import { AuthEffects } from './store/effects/auth.effects';
+import { reducers } from './store/app.states';
 
 @NgModule({
   declarations: [
@@ -72,7 +77,8 @@ import { ConfirmComponent } from './pages/confirm/confirm.component';
     CarrierComponent,
     CarriersComponent,
     CarrierDirective,
-    ConfirmComponent
+    ConfirmComponent,
+    LoginUsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,7 +88,9 @@ import { ConfirmComponent } from './pages/confirm/confirm.component';
     ReactiveFormsModule,
     ChartsModule,
     NgxWebstorageModule.forRoot(),
-    NgbModule
+    NgbModule,
+    StoreModule.forRoot(reducers, {}),
+    EffectsModule.forRoot([AuthEffects])
   ],
   providers: [HttpRequestService],
   bootstrap: [AppComponent]

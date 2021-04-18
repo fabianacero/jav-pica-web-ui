@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from "rxjs";
 import { HttpRequestService } from "../http-request/http-request.service";
 import { CarriersResponse } from "../../models/carriers-response";
+import { environment } from "@environments/environment";
 import { carriersMock } from "../../mocks/carriers.mock";
 
 @Injectable({
@@ -9,7 +10,7 @@ import { carriersMock } from "../../mocks/carriers.mock";
 })
 export class CarriersService {
 
-  public enableMock = true;
+  public enableMock  = environment.enableMock;
 
   constructor(private httpRequest: HttpRequestService) {
   }
