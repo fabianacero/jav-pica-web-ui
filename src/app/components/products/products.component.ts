@@ -1,20 +1,25 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import {AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit, AfterViewInit {
+export class ProductsComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Input() products: any;
-  @Input() category: number;
   public filteredProducts: any;
 
   constructor() {
   }
 
   ngOnInit(): void {
+    console.log('this.products, ', this.products);
+    this.filteredProducts = this.products;
+    console.log('this.filteredProducts, ', this.filteredProducts);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
     this.filteredProducts = this.products;
   }
 

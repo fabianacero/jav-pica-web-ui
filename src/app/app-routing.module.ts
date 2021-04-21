@@ -16,6 +16,7 @@ import { ProvideradmComponent } from './pages/provideradm/provideradm.component'
 import { ProviderQuotesComponent } from './pages/provider-quotes/provider-quotes.component';
 import { CarrierComponent } from "./pages/carrier/carrier.component";
 import { ConfirmComponent } from "@pages/confirm/confirm.component";
+import {PaymentComponent} from '@pages/payment/payment.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/inicio', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'registro', component: RegisterComponent},
   {path: 'ingresa', component: LoginComponent},
   {path: 'ingreso', component: LoginUsersComponent },
+  {path: 'pago', component: PaymentComponent},
   {path: 'confirma-pedido', component: ConfirmComponent},
   {path: 'mi-cuenta', component: AccountComponent, canActivate: [LoginGuard]},
   {path: 'mis-cotizaciones', component: QuotesComponent, canActivate: [LoginGuard]},

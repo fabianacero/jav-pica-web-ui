@@ -13,7 +13,6 @@ import {ProductServiceDetail} from '../../../models/product-service-detail';
 export class FormComponent implements OnInit {
 
   @Input() productServiceData;
-  @Input() category;
   private categoryIndex: number;
   public productServiceDescription: string;
   public totalScore: number;
@@ -25,7 +24,7 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.categoryIndex = (this.category - 1);
+    this.categoryIndex = 0;
     this.quotation = new QuotationRequest();
     this.quotationDetail = new QuotationRequestDetail();
     this.temporalQuotations = this.utilities.getFromSessionObject('quotation', []);
@@ -55,7 +54,7 @@ export class FormComponent implements OnInit {
         productDescription: this.quotationDetail.productDescription,
         additionalInformation: this.quotationDetail.additionalInformation
       });
-      this.quotation.categoryId = this.category;
+      this.quotation.categoryId = 0;
       this.quotation.addDetail(detail);
       this.temporalQuotations[this.categoryIndex] = this.quotation;
       this.utilities.saveOnSession('quotation', this.temporalQuotations);
