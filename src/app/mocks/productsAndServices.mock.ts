@@ -1,98 +1,92 @@
 export const productsAndServices = [
-  {
-    "categoryId":1,
-    "categoryDescription":"PRODUCT",
-    "productsServices":[
-      {
-        "subCategoryId":1,
-        "productServiceDescription":"Samsung",
-        "subCategoryDescription":"Televisores",
-        "totalScore":8
-      },
-      {
-        "subCategoryId":1,
-        "productServiceDescription":"Sony",
-        "subCategoryDescription":"Televisores",
-        "totalScore":10
-      },
-      {
-        "subCategoryId":1,
-        "productServiceDescription":"LG",
-        "subCategoryDescription":"Televisores",
-        "totalScore":1
-      },
-      {
-        "subCategoryId":2,
-        "productServiceDescription":"Apple",
-        "subCategoryDescription":"Computadoras",
-        "totalScore":80
-      },
-      {
-        "subCategoryId":2,
-        "productServiceDescription":"Toshiba",
-        "subCategoryDescription":"Computadoras",
-        "totalScore":15
-      },
-      {
-        "subCategoryId":2,
-        "productServiceDescription":"Acer",
-        "subCategoryDescription":"Computadoras",
-        "totalScore":2
-      },
-      {
-        "subCategoryId":3,
-        "productServiceDescription":"Motorola",
-        "subCategoryDescription":"Celulares",
-        "totalScore":4
-      },
-      {
-        "subCategoryId":3,
-        "productServiceDescription":"iPhone",
-        "subCategoryDescription":"Celulares",
-        "totalScore":8
-      },
-      {
-        "subCategoryId":3,
-        "productServiceDescription":"Alcatel",
-        "subCategoryDescription":"Celulares",
-        "totalScore":2
-      },
-      {
-        "subCategoryId":3,
-        "productServiceDescription":"Nokia",
-        "subCategoryDescription":"Celulares",
-        "totalScore":1
-      },
-      {
-        "subCategoryId":4,
-        "productServiceDescription":"XBOX",
-        "subCategoryDescription":"Consolas",
-        "totalScore":3
-      },
-      {
-        "subCategoryId":4,
-        "productServiceDescription":"Play Station",
-        "subCategoryDescription":"Consolas",
-        "totalScore":5
-      },
-      {
-        "subCategoryId":4,
-        "productServiceDescription":"WII",
-        "subCategoryDescription":"Consolas",
-        "totalScore":4
-      },
-      {
-        "subCategoryId":4,
-        "productServiceDescription":"Nintendo DS",
-        "subCategoryDescription":"Consolas",
-        "totalScore":3
-      },
-      {
-        "subCategoryId":4,
-        "productServiceDescription":"PSP  ",
-        "subCategoryDescription":"Consolas",
-        "totalScore":20
-      }
-    ]
-  }
+{
+  "subCategoryId":1,
+  "productServiceDescription":"Samsung",
+  "subCategoryDescription":"Televisores",
+  "totalScore":8
+},
+{
+  "subCategoryId":1,
+  "productServiceDescription":"Sony",
+  "subCategoryDescription":"Televisores",
+  "totalScore":10
+},
+{
+  "subCategoryId":1,
+  "productServiceDescription":"LG",
+  "subCategoryDescription":"Televisores",
+  "totalScore":1
+},
+{
+  "subCategoryId":2,
+  "productServiceDescription":"Apple",
+  "subCategoryDescription":"Computadoras",
+  "totalScore":80
+},
+{
+  "subCategoryId":2,
+  "productServiceDescription":"Toshiba",
+  "subCategoryDescription":"Computadoras",
+  "totalScore":15
+},
+{
+  "subCategoryId":2,
+  "productServiceDescription":"Acer",
+  "subCategoryDescription":"Computadoras",
+  "totalScore":2
+},
+{
+  "subCategoryId":3,
+  "productServiceDescription":"Motorola",
+  "subCategoryDescription":"Celulares",
+  "totalScore":4
+},
+{
+  "subCategoryId":3,
+  "productServiceDescription":"iPhone",
+  "subCategoryDescription":"Celulares",
+  "totalScore":8
+},
+{
+  "subCategoryId":3,
+  "productServiceDescription":"Alcatel",
+  "subCategoryDescription":"Celulares",
+  "totalScore":2
+},
+{
+  "subCategoryId":3,
+  "productServiceDescription":"Nokia",
+  "subCategoryDescription":"Celulares",
+  "totalScore":1
+},
+{
+  "subCategoryId":4,
+  "productServiceDescription":"XBOX",
+  "subCategoryDescription":"Consolas",
+  "totalScore":3
+},
+{
+  "subCategoryId":4,
+  "productServiceDescription":"Play Station",
+  "subCategoryDescription":"Consolas",
+  "totalScore":5
+},
+{
+  "subCategoryId":4,
+  "productServiceDescription":"WII",
+  "subCategoryDescription":"Consolas",
+  "totalScore":4
+},
+{
+  "subCategoryId":4,
+  "productServiceDescription":"Nintendo DS",
+  "subCategoryDescription":"Consolas",
+  "totalScore":3
+},
+{
+  "subCategoryId":4,
+  "productServiceDescription":"PSP  ",
+  "subCategoryDescription":"Consolas",
+  "totalScore":20
+}
 ] as any;

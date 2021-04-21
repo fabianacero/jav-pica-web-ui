@@ -5,8 +5,8 @@
     "logLevel": "debug",
     "changeOrigin": true
   },
-  "/product-service/*": {
-    "target": "http://localhost:7072",
+  "/v1/retrieve/products/*": {
+    "target": "http://inventarioks-env.eba-n3tbdanq.us-east-2.elasticbeanstalk.com",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true

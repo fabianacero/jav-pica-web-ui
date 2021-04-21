@@ -25,7 +25,7 @@ export class ProductComponent implements OnInit {
     this.model = new Product();
     this.model.categoryType = 1;
     this.model.subCategoryType = 1;
-    //Obtenemos las sub categorias de los productos
+
     this.product.getUsers( ).subscribe((data) => { // Success
         this.subCategorias = data[0].subCategories;
       },
@@ -51,7 +51,7 @@ export class ProductComponent implements OnInit {
     if (!registerForm.valid) {
       return false;
     }
-  
+
     this.product.productRegistry(registerForm).subscribe((response: any) => {
       alert('Producto creado correctamente!');
       this.model.productDescription = "";

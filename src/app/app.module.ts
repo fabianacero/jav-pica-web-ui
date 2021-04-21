@@ -44,6 +44,7 @@ import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import { AuthEffects } from './store/effects/auth.effects';
 import { reducers } from './store/app.states';
+import { PaymentComponent } from './pages/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { reducers } from './store/app.states';
     CarrierDirective,
     ConfirmComponent,
     LoginUsersComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
