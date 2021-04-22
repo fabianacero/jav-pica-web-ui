@@ -27,6 +27,7 @@
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "ng-bootstrap": "^1.6.3",
+    "ng-payment-card": "0.0.8",
     "ng2-charts": "^2.3.0",
     "ngx-webstorage": "^5.0.0",
     "rxjs": "~6.5.4",

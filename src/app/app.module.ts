@@ -45,6 +45,7 @@ import { EffectsModule } from "@ngrx/effects";
 import { AuthEffects } from './store/effects/auth.effects';
 import { reducers } from './store/app.states';
 import { PaymentComponent } from './pages/payment/payment.component';
+import {NgPaymentCardModule} from 'ng-payment-card';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import { PaymentComponent } from './pages/payment/payment.component';
     NgxWebstorageModule.forRoot(),
     NgbModule,
     StoreModule.forRoot(reducers, {}),
-    EffectsModule.forRoot([AuthEffects])
+    EffectsModule.forRoot([AuthEffects]),
+    NgPaymentCardModule
   ],
   providers: [HttpRequestService],
   bootstrap: [AppComponent]
