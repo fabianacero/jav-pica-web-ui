@@ -15,7 +15,10 @@ export class LoginUsersService {
   ) { }
 
   public auth(_body: User): Observable<any> {
-
+    const payload = {
+      email: _body.email,
+      password: btoa(_body.password)
+    };
 
     const  headers = new  HttpHeaders().set('Content-Type',  'application/json; charset=utf-8');
     if (this.enableMock) {
@@ -23,7 +26,7 @@ export class LoginUsersService {
       return of(loginMock);
     } else {
       return this.http
-      .post<any>(`/usuario/login`, _body,{headers});
+      .post<any>(`/usuario/login`, payload,{headers});
     }
 
   }

@@ -4,6 +4,10 @@ import {ProductsService} from '../../provider/products/products.service';
 import {Utilities} from '../../utilities/utilities';
 import {CarriersService} from '../../provider/carriers/carriers.service';
 import {CarriersResponse} from '../../models/carriers-response';
+import { Observable } from "rxjs";
+import { Store } from "@ngrx/store";
+import { AppState, selectCarrierState } from "@app/store/app.states";
+import { Carrie } from "@app/store/carrier/actions/carrier.actions";
 
 @Component({
   selector: 'app-base',
@@ -14,10 +18,13 @@ export class BaseComponent implements OnInit {
 
   public productsBySubCategory: any;
   public carriers;
+  getState: Observable<any>;
 
   constructor(private productsService: ProductsService,
               private carriersService: CarriersService,
-              private utilities: Utilities) {
+              private utilities: Utilities,
+              private store: Store<AppState>) {
+                this.getState = this.store.select(selectCarrierState);
   }
 
   ngOnInit(): void {
@@ -37,6 +44,10 @@ export class BaseComponent implements OnInit {
       this.carriers = carriers;
       this.utilities.sortBy(carriers, 'totalScore');
     });
+  }
+
+  public submitData(event: any) {
+    this.store.dispatch(new Carrie(event));
   }
 
 }

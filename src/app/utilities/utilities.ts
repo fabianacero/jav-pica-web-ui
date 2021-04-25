@@ -61,6 +61,7 @@ export class Utilities {
 
   public saveOnSession(name: string, element: any) {
     let elementToStorage: string;
+    console.log(element);
     if (element instanceof Object || element instanceof Array) {
       elementToStorage = JSON.stringify(element);
     }

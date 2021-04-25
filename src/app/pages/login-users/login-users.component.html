@@ -39,7 +39,7 @@
 					</span>
 
 					<div class="wrap-input100 validate-input"  data-validate = "Usuario Valido: nombre.apellido">
-						<input class="input100" type="text" formControlName="email" name="email">
+						<input [ngClass]="{'has-val': LoginForms.get('email').dirty || LoginForms.get('email').touched}" class="input100" type="text" formControlName="email" name="email">
 						<span class="focus-input100" data-placeholder="usuario"></span>
 					</div>
 
@@ -47,7 +47,7 @@
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
-						<input class="input100" formControlName="password" type="password" name="pass">
+						<input [ngClass]="{'has-val': LoginForms.get('password').dirty || LoginForms.get('password').touched}" class="input100" formControlName="password" type="password" name="pass">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
@@ -76,5 +76,6 @@
 
 	<div id="dropDownSelect1"></div>
 </body>
+
 </html>
 <app-faqs id="preguntas"></app-faqs>

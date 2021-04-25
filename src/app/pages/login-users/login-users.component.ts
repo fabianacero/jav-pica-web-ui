@@ -4,8 +4,8 @@ import { LoginUsersService } from "@provider/login-users/login-users.service";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Observable } from "rxjs";
 import { Store } from "@ngrx/store";
-import { AppState, selectAuthState } from "@store/app.states";
-import { LogIn } from "@store/actions/auth.actions";
+import { AppState, selectAuthState } from "@app/store/auth/app.states";
+import { LogIn } from "@app/store/auth/actions/auth.actions";
 
 @Component({
   selector: "app-login",
@@ -17,8 +17,6 @@ export class LoginUsersComponent implements OnInit {
   getState: Observable<any>;
   errorMessage: string | null;
   constructor(
-    private router: Router,
-    private login: LoginUsersService,
     public fb: FormBuilder,
     private store: Store<AppState>
   ) {
