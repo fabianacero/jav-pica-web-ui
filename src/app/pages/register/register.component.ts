@@ -59,7 +59,7 @@ export class RegisterComponent implements OnInit {
           "success"
         ).then((result) => {
           if (result.value) {
-            this.router.navigate([""]);
+            this.router.navigate([Routes.LOGIN]);
           }
         }),
       () => alert("Error Intente Nuevamente")

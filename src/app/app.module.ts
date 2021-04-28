@@ -42,8 +42,9 @@ import { CarrierDirective } from './directives/carrier.directive';
 import { ConfirmComponent } from './pages/confirm/confirm.component';
 import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
-import { AuthEffects } from './store/effects/auth.effects';
+import { AuthEffects } from './store/auth/effects/auth.effects';
 import { reducers } from './store/app.states';
+import { CarrierEffects } from './store/carrier/effects/carrier.effects';
 import { PaymentComponent } from './pages/payment/payment.component';
 import {NgPaymentCardModule} from 'ng-payment-card';
 
@@ -93,7 +94,7 @@ import {NgPaymentCardModule} from 'ng-payment-card';
     NgxWebstorageModule.forRoot(),
     NgbModule,
     StoreModule.forRoot(reducers, {}),
-    EffectsModule.forRoot([AuthEffects]),
+    EffectsModule.forRoot([AuthEffects, CarrierEffects]),
     NgPaymentCardModule
   ],
   providers: [HttpRequestService],

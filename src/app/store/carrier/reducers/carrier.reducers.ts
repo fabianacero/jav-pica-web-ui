@@ -1,32 +1,29 @@
-import { User } from '../../models/user';
-import { AuthActionTypes, All } from '../actions/auth.actions';
+
+import { CarriesActionTypes, All } from '../actions/carrier.actions';
 
 export interface State {
-    isAuthenticated: boolean;
-    user: User | null;
+    carrier: Object | null;
     errorMessage: string | null;
 }
 
 export const initialState: State = {
-    isAuthenticated: false,
-    user: null,
+    carrier: null,
     errorMessage: null   
 }
 
 export function reducer(state = initialState, action: All): State {
     switch (action.type) {
-      case AuthActionTypes.LOGIN_SUCCESS: {
+      case CarriesActionTypes.CARRIE_SELECT: {
         return {
           ...state,
-          isAuthenticated: true,
           errorMessage: null
         };
       }
 
-      case AuthActionTypes.LOGIN_FAILURE: {
+      case CarriesActionTypes.CARRIE_FAILURE: {
         return {
           ...state,
-          errorMessage: 'Su Email o Contraseña es incorrecta.'
+          errorMessage: 'Mensajeria no seleccionada, error.'
         };
       }
  

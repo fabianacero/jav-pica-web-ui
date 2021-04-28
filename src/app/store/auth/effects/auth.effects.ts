@@ -6,10 +6,10 @@ import { tap, map, switchMap, catchError } from 'rxjs/operators';
 import {
   AuthActionTypes,
   LogIn, LogInSuccess, LogInFailure,
-} from '../../store/actions/auth.actions';
+} from '../actions/auth.actions';
 
 import { LoginUsersService } from '@provider/login-users/login-users.service';
-
+import {Utilities} from '../../../utilities/utilities';
 
 @Injectable()
 export class AuthEffects {
@@ -18,6 +18,7 @@ export class AuthEffects {
     private actions: Actions,
     private authService: LoginUsersService,
     private router: Router,
+    private utilities: Utilities,
   ) {}
 
   
@@ -53,7 +54,8 @@ LogInSuccess: Observable<any> = this.actions.pipe(
     localStorage.setItem('email', process.payload.email);
     localStorage.setItem('idRole', process.payload.idRole);
     localStorage.setItem('id', process.payload.id);
-    this.router.navigateByUrl("/inicio");
+    this.utilities.saveOnSession('session', process.payload);
+    this.router.navigateByUrl(localStorage.getItem('previousUrl'));
   })
 );
 

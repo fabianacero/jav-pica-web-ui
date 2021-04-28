@@ -27,7 +27,7 @@ export class RegisterService {
       surmanes: _body.surnames,
       email: _body.email,
       telephone: _body.telephone,
-      password: _body.password,
+      password: btoa(_body.password),
       idRole: _body.role,
     };
     if (this.enableMock) {

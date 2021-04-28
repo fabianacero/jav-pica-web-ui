@@ -7,10 +7,10 @@
           <div class="carriers__form">
             <div class="carriers__form--header"><span class="back">x</span></div>
             Some
-            <div class="carriers__form--button"><button>Seleccionar ></button></div>
+            <div class="carriers__form--button"><button (click)="carrierEvent.emit(carrier['carrierName'])" name="{{ carrier['carrierName'] }}">Seleccionar ></button></div>
           </div>
         </div>
-        <span>trasnportador</span>
+        <span>transportador</span>
       </div>
     </div>
   </div>

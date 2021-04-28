@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-carriers',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CarriersComponent implements OnInit {
 
   @Input() carriers: any;
+  @Output() carrierEvent = new EventEmitter();
 
   constructor() { }
 
