@@ -38,6 +38,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { QuoteStatusPipe } from './pipes/quote-status.pipe';
 import { CarrierComponent } from './pages/carrier/carrier.component';
 import { CarriersComponent } from './components/carriers/carriers.component';
+import { resumeProductsComponent } from './components/resumeProducts/resumeProducts.component';
 import { CarrierDirective } from './directives/carrier.directive';
 import { ConfirmComponent } from './pages/confirm/confirm.component';
 import { StoreModule } from "@ngrx/store";
@@ -47,6 +48,7 @@ import { reducers } from './store/app.states';
 import { CarrierEffects } from './store/carrier/effects/carrier.effects';
 import { PaymentComponent } from './pages/payment/payment.component';
 import {NgPaymentCardModule} from 'ng-payment-card';
+import { ResumePurchaseComponent } from './pages/resumePurchase/resume-purchase/resume-purchase.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +85,8 @@ import {NgPaymentCardModule} from 'ng-payment-card';
     ConfirmComponent,
     LoginUsersComponent,
     PaymentComponent,
+    resumeProductsComponent,
+    ResumePurchaseComponent,
   ],
   imports: [
     BrowserModule,
