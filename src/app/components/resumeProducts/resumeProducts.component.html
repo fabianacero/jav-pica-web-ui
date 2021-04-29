@@ -1,0 +1,59 @@
+<table class="table cart-items">
+  <thead>
+    <tr>
+      <th colspan="2" class="product">Producto</th>
+      <th
+        class="shipping-date"
+      >
+        Proveedor de Envío
+      </th>
+      <th class="product-price" >Precio</th>
+      <th class="quantity">Cantidad</th>
+      <th class="quantity-price">Total</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let detail of products">
+    <tr
+      class="product-item"
+      rowspan="2"
+    >
+      <td
+        class="{{detail._productDescription| lowercase}} prodserv__image"
+      >
+      </td>
+      <td
+        class="product-name"
+      >
+        <a
+          > {{detail._productDescription}}</a
+        >
+      </td>
+      <td
+        class="shipping-date"
+      >
+        <span
+          class="shipping-estimate-date"
+          >A elección del cliente</span
+        >
+      </td>
+      <td class="product-price">
+        <span class="best-price">
+          <span class="new-product-real-price hide"
+            >$ a cotizar</span
+          >
+        </span>
+      </td>
+      <td
+        class="quantity"
+      >
+      {{detail._quantity}}
+      </td>
+      <td class="quantity-price">
+        <span
+          class="total-selling-price"
+          >En proceso de cotización</span
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>

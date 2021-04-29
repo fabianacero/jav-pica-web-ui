@@ -1,0 +1,102 @@
+.prodserv {
+&__image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1.5rem;
+  background-image: url('src/assets/images/def-products.jpg');
+
+  &.clicked {
+    transform: rotateY(180deg);
+  }
+
+  &.iphone {
+    background-image: url('src/assets/images/products/iphone.png');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.samsung {
+    background-image: url('src/assets/images/products/samsung.jpeg');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.sony {
+    background-image: url('src/assets/images/products/sony.jpeg');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.lg {
+    background-image: url('src/assets/images/products/lg.jpeg');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.apple {
+    background-image: url('src/assets/images/products/apple.jpeg');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.toshiba {
+    background-image: url('src/assets/images/products/toshiba.webp');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.acer {
+    background-image: url('src/assets/images/products/acer.jpeg');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.motorola {
+    background-image: url('src/assets/images/products/motorola.png');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.alcatel {
+    background-image: url('src/assets/images/products/alcatel.png');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.nokia {
+    background-image: url('src/assets/images/products/nokia.png');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.xbox {
+    background-image: url('src/assets/images/products/xbox.png');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.play {
+    background-image: url('src/assets/images/products/playstation.jpeg');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.wii {
+    background-image: url('src/assets/images/products/wii.png');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.nintendo {
+    background-image: url('src/assets/images/products/nintendo-ds.png');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+
+  &.psp {
+    background-image: url('src/assets/images/products/psp.png');
+    background-position: 0rem 0rem;
+    background-size: 5rem;
+  }
+}
+}

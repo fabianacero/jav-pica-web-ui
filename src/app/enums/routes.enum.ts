@@ -10,5 +10,6 @@ export enum Routes {
   PROVEEDORES = '/ver-proveedor',
   PRIVIDER_QUOTES = '/cotizaciones-solicitadas',
   CARRIERS = '/transporte',
+  RESUMEN = '/resumen',
   PAGO = '/pago',
 }
