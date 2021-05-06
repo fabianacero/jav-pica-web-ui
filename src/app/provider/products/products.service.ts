@@ -4,13 +4,14 @@ import {HttpRequestService} from '../http-request/http-request.service';
 import {Observable, of} from 'rxjs';
 import {productsAndServices} from '../../mocks/productsAndServices.mock';
 import {ProductServiceDetail} from '@models/product-service-detail';
+import { environment } from "@environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  public enableMock = true;
+  public enableMock = environment.enableMock;
 
   constructor(private httpRequest: HttpRequestService) {
   }
@@ -20,7 +21,7 @@ export class ProductsService {
       console.log('::: <MOCK>Enable!</MOCK> :::');
       return of(productsAndServices);
     } else {
-      return this.httpRequest.request('/v1/retrieve/products');
+      return this.httpRequest.request('/usuario/productos');
     }
   }
 }

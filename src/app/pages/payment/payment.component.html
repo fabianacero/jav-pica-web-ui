@@ -1,6 +1,5 @@
 <app-header></app-header>
 <ng-payment-card
-  [ccNumMissingTxt]='"Digita el número de la tarjeta"'
-  [cardExpiredTxt]='"Ingresa la fecha de expiración"'
-  (formSaved)='processPayment(this)'></ng-payment-card>
+  (formSaved)="processPayment($event)">
+</ng-payment-card>
 <app-faqs id="preguntas"></app-faqs>

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   Endpoint: "http://localhost:8080",
-   enableMock: true,
+   enableMock: false,
 };
 
 /*

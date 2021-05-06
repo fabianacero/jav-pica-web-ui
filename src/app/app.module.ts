@@ -47,7 +47,7 @@ import { AuthEffects } from './store/auth/effects/auth.effects';
 import { reducers } from './store/app.states';
 import { CarrierEffects } from './store/carrier/effects/carrier.effects';
 import { PaymentComponent } from './pages/payment/payment.component';
-import {NgPaymentCardModule} from 'ng-payment-card';
+import { NgPaymentCardModule } from 'ng-payment-card';
 import { ResumePurchaseComponent } from './pages/resumePurchase/resume-purchase/resume-purchase.component';
 
 @NgModule({
