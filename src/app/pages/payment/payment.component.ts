@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import {Router} from '@angular/router';
 import {Routes} from '../../enums/routes.enum';
 import {Utilities} from '../../utilities/utilities';
+import {PaymentService} from '../../provider/payment/payment.service';
 
 @Component({
   selector: 'app-payment',
@@ -11,7 +12,7 @@ import {Utilities} from '../../utilities/utilities';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor(private router: Router,
+  constructor(private payment: PaymentService,private router: Router,
     private utilities: Utilities) {
     window.localStorage.setItem('previousUrl', this.router.url);
   }
@@ -35,7 +36,13 @@ export class PaymentComponent implements OnInit {
 }
 
   processPayment(cc: any) {
-    console.log('cc, ', cc);
+    this.payment.paymentProduct(cc).subscribe((data) => { // Success
+      console.log(data)
+    },
+    (error) => {
+      console.error(error);
+    }
+  );
   }
 
 }

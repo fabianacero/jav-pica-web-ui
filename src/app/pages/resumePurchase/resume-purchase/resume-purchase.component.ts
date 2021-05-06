@@ -20,7 +20,7 @@ export class ResumePurchaseComponent implements OnInit {
   }
 
   submit(){
-    this.router.navigate([Routes.CARRIERS]);
+    this.router.navigate([Routes.PAGO]);
   }
 
 }
