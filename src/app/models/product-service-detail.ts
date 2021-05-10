@@ -3,4 +3,8 @@ export interface ProductServiceDetail {
   productServiceDescription: string;
   subCategoryDescription: string;
   totalScore: number;
+  quantity: number;
+  nameProvider: string;
+  value: number;
+  iDProductProvider: string;
 }

@@ -36,7 +36,6 @@ export class resumeProductsComponent implements OnInit {
         }
       });
       this.hasTemporalQuotes = this.products.length > 0;
-      console.log(this.products)
     });
   }
 

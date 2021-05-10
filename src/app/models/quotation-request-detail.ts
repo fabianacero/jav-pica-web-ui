@@ -6,6 +6,8 @@ export class QuotationRequestDetail {
   private _amount: number;
   private _discount: number;
   private _description: string;
+  private _provider: string;
+  private _idproductprovider: string;
 
   constructor(quotationDetail?) {
     if (quotationDetail) {
@@ -13,6 +15,9 @@ export class QuotationRequestDetail {
       this._productDescription = quotationDetail.productDescription;
       this._quantity = quotationDetail.quantity;
       this._additionalInformation = quotationDetail.additionalInformation;
+      this._provider = quotationDetail.provider;
+      this._amount = quotationDetail.amount;
+      this._idproductprovider = quotationDetail.idproductprovider;
     }
   }
 
@@ -70,5 +75,21 @@ export class QuotationRequestDetail {
 
   set description(value: string) {
     this._description = value;
+  }
+
+  get provider(): string {
+    return this._provider;
+  }
+
+  set provider(value: string) {
+    this._provider = value;
+  }
+
+  get idproductprovider(): string {
+    return this._idproductprovider;
+  }
+
+  set idproductprovider(value: string) {
+    this._idproductprovider = value;
   }
 }
