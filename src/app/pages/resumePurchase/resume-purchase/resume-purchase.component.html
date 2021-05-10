@@ -2,7 +2,10 @@
 <app-banner></app-banner>
 <div class="container">
 <app-resumeProducts></app-resumeProducts>
-<div class="resume__form--button"><button (click)="submit()" name="resumeProduct">Continuar Pago</button></div>
+<form #resumeForm="ngForm" (ngSubmit)="submit(resumeForm)" class="form">
+Dirección de Envio <input class="resume" name="dir" id="dir" type="text" ngModel required>
+<div class="resume__form--button"><button type="submit" [disabled]="!resumeForm.valid" name="resumeProduct">Continuar Pago</button></div>
+</form>
 <br>
 </div>
 <app-faqs id="preguntas"></app-faqs>

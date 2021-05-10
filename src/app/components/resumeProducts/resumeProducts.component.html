@@ -33,13 +33,13 @@
       >
         <span
           class="shipping-estimate-date"
-          >A elección del cliente</span
+          >{{detail.provider}}</span
         >
       </td>
       <td class="product-price">
         <span class="best-price">
           <span class="new-product-real-price hide"
-            >$ a cotizar</span
+            >{{detail._amount}}</span
           >
         </span>
       </td>
@@ -51,7 +51,7 @@
       <td class="quantity-price">
         <span
           class="total-selling-price"
-          >En proceso de cotización</span
+          >{{detail._amount * detail._quantity}}</span
         >
       </td>
     </tr>

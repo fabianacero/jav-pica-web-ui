@@ -37,7 +37,19 @@ export class PaymentComponent implements OnInit {
 
   processPayment(cc: any) {
     this.payment.paymentProduct(cc).subscribe((data) => { // Success
-      console.log(data)
+      
+      this.payment.createOrder(JSON.parse(localStorage.getItem('order'))).subscribe((data) => { // Success
+        Swal.fire(
+          "Orden creada Exitosamente Nro "+ data.idOrden,
+          `el pedido a sido creado con exito!`,
+          "success"
+        ).then((result) => {
+          if (result.value) {
+            localStorage.clear();
+            this.router.navigate([Routes.HOME]);
+          }
+        })
+      });
     },
     (error) => {
       console.error(error);

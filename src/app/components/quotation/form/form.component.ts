@@ -39,6 +39,10 @@ export class FormComponent implements OnInit {
       this.totalScore = productServiceData.totalScore;
       this.quotationDetail.productDescription = this.productServiceDescription;
       this.quotationDetail.productId = productServiceData.totalScore;
+      this.quotationDetail.quantity = productServiceData.quantity;
+      this.quotationDetail.provider = productServiceData.nameProvider;
+      this.quotationDetail.idproductprovider = productServiceData.iDProductProvider;
+      this.quotationDetail.amount = productServiceData.value;
       if (this.temporalQuotations[this.categoryIndex]) {
         this.quotation = Object.assign(new QuotationRequest(), this.temporalQuotations[this.categoryIndex]);
         this.quotation.assingObjectToDetail(this.quotation.details);
@@ -52,7 +56,10 @@ export class FormComponent implements OnInit {
         productId: this.quotationDetail.productId,
         quantity: this.quotationDetail.quantity,
         productDescription: this.quotationDetail.productDescription,
-        additionalInformation: this.quotationDetail.additionalInformation
+        additionalInformation: this.quotationDetail.additionalInformation,
+        provider: this.quotationDetail.provider,
+        amount: this.quotationDetail.amount,
+        idproductprovider: this.quotationDetail.idproductprovider,
       });
       this.quotation.categoryId = 0;
       this.quotation.addDetail(detail);
