@@ -45,7 +45,7 @@ export class PaymentComponent implements OnInit {
           "success"
         ).then((result) => {
           if (result.value) {
-            localStorage.clear();
+            this.utilities.removeOnSession('quotation');
             this.router.navigate([Routes.HOME]);
           }
         })

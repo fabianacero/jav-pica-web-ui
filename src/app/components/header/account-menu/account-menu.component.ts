@@ -39,6 +39,9 @@ export class AccountMenuComponent implements OnInit {
 
   public logOut() {
     this.utilities.removeOnSession('session');
+    this.utilities.removeOnSession('quotation');
+    localStorage.clear();
+    this.router.navigateByUrl(Routes.APP);
     this.router.navigate([Routes.HOME]);
   }
 }
