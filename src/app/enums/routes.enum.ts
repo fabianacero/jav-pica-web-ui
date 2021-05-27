@@ -1,6 +1,7 @@
 export enum Routes {
   LOGIN = '/ingreso',
   REGISTRATION = '/registro',
+  RAIZ = '/',
   HOME = '/inicio',
   APP = '/mi-cuenta',
   QUOTES = '/mis-cotizaciones',
