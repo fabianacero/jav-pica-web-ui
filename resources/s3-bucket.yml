@@ -1,0 +1,25 @@
+Resources:
+  Website:
+    Type: AWS::S3::Bucket
+    Properties:
+      WebsiteConfiguration:
+        ErrorDocument: index.html
+        IndexDocument: index.html
+  WebsiteAllowPublicReadPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Website
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - "s3:GetObject"
+            Resource:
+              - !Join ["/", [!Ref Website, "public"]]
+            Principal: "*"
+Outputs:
+  WebSiteUrl:
+    Value: { "Fn::GetAtt": [Website, WebsiteURL] }
+  WebSiteBucket:
+    Value: { Ref: Website }
